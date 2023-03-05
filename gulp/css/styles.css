@@ -1,0 +1,275 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* global element styling */
+
+
+  body {
+    background-color: #082B59;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+}
+
+  img {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+  
+  h1, h2 {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: bold;}
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  header {
+    border-bottom: 8px solid #D98555}
+  
+  
+  article {
+    padding: 0 2rem;
+  }
+  
+  a {
+    color: #59331D;
+  }
+  
+  a:hover {
+    color: #D98555;
+    text-decoration: none;
+  }
+
+  .coffee-beans {
+    background-image: url("../media/images/gulp-bottom-beans.jpg");
+    height: 240px;
+    display: flex;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #082B59;
+    color: #F2F2F2;
+    padding: 2rem;
+    border-top: 8px solid #D98555}
+  
+ footer ul {
+  margin: 0;
+  padding: 0;
+ } 
+
+ footer li {
+    font-weight: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0rem .25rem .5rem .25rem;}
+
+  footer a {
+      color: #F2F2F2;
+      padding: 0rem .25rem .5rem .25rem;}
+    
+    footer a:hover {
+      color: #D98555;
+    }
+
+  .button {
+    margin-top: 1.5rem;
+  }
+  
+  .button a {
+    font-family: 'Lato', serif;
+    font-size: 1rem;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #59331D;
+    border-radius: 5px;
+    text-align: center;}
+
+
+    .button a:hover {
+      background-color: #D98555;
+      color: #082B59;
+    }
+  
+  
+
+  /* navbar */
+
+    nav {
+      margin: 0 1rem;
+    }
+    
+    nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;}
+
+    nav li {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      bottom: 0;
+      gap: .25rem;
+      align-items: baseline;
+    }
+  
+  nav a {
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    color: #FFFFFF;
+    margin: 0 0 2rem 0;
+    text-align: center;}
+  
+  nav a:hover {
+    color: #D98555;}
+  
+  nav img {
+    max-width: 200px;}
+
+  nav .logo a {
+      background-color: transparent;
+      margin: 0;
+  }
+  
+  nav .fa-solid {
+    padding: 0.5rem;}
+  
+
+
+  
+  
+
+  /* specific styling for product cards */
+
+  .card {
+    background-color: #F2F2F2;
+  }
+
+  .card h2 {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .card p {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+.card img {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.card figcaption {
+  text-align: start
+}
+
+  
+
+/* layout - mobile first! */
+
+  .bkgd {
+    background-color: #f2f2f2;
+  }
+
+  .container, .products, .contactcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    background-color: #f2f2f2;
+}
+  
+
+
+/* apply our flexbox layout */
+
+@media (min-width: 550px) {
+  nav {
+    margin-left: 0;
+  }
+  nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 0 3rem 0;
+  }
+  
+.logo {
+  flex-basis: 100%;
+  text-align: center;
+}
+}
+
+  @media (min-width: 750px) {
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .prodcontainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .card h2,
+    .card p {
+      padding: 0 1rem;
+    }
+
+  .logo {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  nav ul {
+    justify-content: flex-start;
+    gap: 3rem;
+    margin-right: 2rem;}
+
+  nav a {
+    margin-top: 5rem;}
+  
+  nav li {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: baseline;
+      gap: .25rem;
+    }
+  
+  .logo {
+    flex-basis: auto;
+    margin-right: auto;}
+  
+    .contactcontainer, .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }}
